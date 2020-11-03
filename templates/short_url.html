@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+<title>{% block title %} Shorten redirect Url {% endblock %}</title>
+
+{% block content %}
+    <p>Below url is suffix by {{short_url_display}} and ready to use </p>
+    </hr>
+    <h1> http://{{aws_host}}:5000/{{short_url_display}} </h1>
+    <p> Please <a href = "http://{{aws_host}}:5000/{{short_url_display}}" title = " to launch long url "> click  </a> on href link to redirect from short link to long </p>
+    </h>
+
+
+    <p>Go to Home Page </p>
+    <a href="http://{{aws_host}}:5000/">BACK TO HOME</a>
+{% endblock %}
