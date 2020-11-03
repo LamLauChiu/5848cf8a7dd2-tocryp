@@ -24,5 +24,5 @@ Requirements
         *  docker run -d -p 5000:5000 shortenurl:1.0
 
 
-![Screenshot](Systemdesign.png)
+![Screenshot](Systemdesign.PNG)
  
