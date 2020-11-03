@@ -23,6 +23,9 @@ Requirements
     * Run docker container from snapshot
         *  docker run -d -p 5000:5000 shortenurl:1.0
 
+System Design 
+
+* To improve the performance MEMCache can be introduced between EC2 instance and database.
 
 ![Screenshot](Systemdesign.PNG)
  
