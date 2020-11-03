@@ -6,3 +6,4 @@ flask-restful==0.3.8
 flask-sqlalchemy==2.4.4
 werkzeug==1.0.1
 jproperties==2.1.0
+psycopg2==2.8.6
