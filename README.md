@@ -22,4 +22,7 @@ Requirements
         *  docker build --tag shortenurl:1.0 .
     * Run docker container from snapshot
         *  docker run -d -p 5000:5000 shortenurl:1.0
+
+
+![alt text](https://github.com/chaudharyssud/5848cf8a7dd2-tocryp/blob/main/Systemdesign.PNG?raw=true)
  
