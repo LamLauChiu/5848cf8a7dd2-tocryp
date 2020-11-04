@@ -12,8 +12,8 @@ with open('app-config.properties', 'rb') as config_file:
     configs.load(config_file)
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("SQLITE_DATABASE_URI").data
-# app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("POSTGRES_DATABASE_URI").data
+app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("DATABASE_URI").data
+# app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("DATABASE_URI").data
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
