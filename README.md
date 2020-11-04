@@ -68,6 +68,10 @@ Requirements
 System Design 
 
 * To improve the performance MEMCache can be introduced between EC2 instance and database.
+* With Cloudformation implemenation currently the solution of database is based on single instance but the code is configurable to run with postgres if the database insatnce created manually.
+
+
+
 
 ![Screenshot](Systemdesign.PNG)
  
