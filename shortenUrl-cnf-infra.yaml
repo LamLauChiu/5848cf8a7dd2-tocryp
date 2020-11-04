@@ -33,6 +33,9 @@
               InstallAndRun:
                 - Install
             Install:
+              packages:
+                yum:
+                  git: [ ]
               files:
                 /home/ec2-user/aws_host.properties:
                   content: !Join [ '', [ 'AWS_HOST:', !GetAtt [ ElasticLoadBalancer, DNSName ] ] ]
@@ -49,16 +52,12 @@
               #!/bin/bash -ex
               yum update -y aws-cfn-bootstrap
               yum update -y
-              yum install git -y
               amazon-linux-extras install docker
               yum install docker
               service docker start
-              groupadd docker
-              usermod -aG docker ec2-user
               /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource LaunchConfig --configsets InstallAndRun --region ${AWS::Region}
               # Signal the status from cfn-init (via $?)
               /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource LaunchConfig --region ${AWS::Region}
-              service docker start
               groupadd docker
               usermod -aG docker ec2-user
 
