@@ -18,10 +18,12 @@ Requirements
         * sudo groupadd docker
         * sudo usermod -aG docker ${USER}
         * logout and log in again to reflect the changes.
-    * Buid docker image
-        *  docker build --tag shortenurl:1.0 .
-    * Run docker container from snapshot
-        *  docker run -d -p 5000:5000 shortenurl:1.0
+ * Download code from github
+   * git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
+* Buid docker image
+   *  docker build --tag shortenurl:1.0 .
+* Run docker container from snapshot
+   *  docker run -d -p 5000:5000 shortenurl:1.0
 
 System Design 
 
