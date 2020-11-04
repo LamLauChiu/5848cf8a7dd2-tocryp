@@ -1,4 +1,44 @@
 # 5848cf8a7dd2-tocryp
+
+#Question-1: Access Log analytics
+Please prepare 3 shell script(s) (any shell script executable on Linux in AWS
+environment) to:
+1. Count the total number of HTTP requests recorded by this access logfile
+2. Find the top-10 (host) hosts makes most requests from 2019-06-10 00:00:00 to
+2019-06-19 23:59:59, inclusively
+3. Find out the country with most requests originating from (according to the sourceIP)
+----
+
+
+
+
+
+
+#Question-2:AWS API programming 
+Please help to prepare a script to query AWS API and look up the public IP of the instance with the specific EC2 Name tag. Then the script should execute the ssh command 
+ssh ec2-user@EC2_PUBLIC_IP .
+----
+
+
+
+
+
+
+
+
+
+#Question-3:System design and Implementation 
+Please implement a URL shortener service (e.g. https://bitly.com/) 
+Implement a simple bit.ly like service
+----
+
+
+
+
+
+
+
+
 Requirements
 
 * Login to EC2 instance
