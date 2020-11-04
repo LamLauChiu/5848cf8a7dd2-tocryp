@@ -23,7 +23,7 @@ Requirements
 * Buid docker image
    *  docker build --tag shortenurl:1.0 .
 * Run docker container from snapshot
-   *  docker run -d -p 5000:5000 shortenurl:1.0
+   *  docker run -d -p 80:5000 shortenurl:1.0
 
 System Design 
 
