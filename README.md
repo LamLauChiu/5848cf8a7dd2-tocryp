@@ -225,7 +225,12 @@ Output: Main Page
 
 Output: click_onlink_to_goto_long_url
 
-![Screenshot](page1.PNG)
+![Screenshot](page2.PNG)
+
+Output: After click :
+
+![Screenshot](page3.PNG)
+
 
 Output : To display all submiited url
 
