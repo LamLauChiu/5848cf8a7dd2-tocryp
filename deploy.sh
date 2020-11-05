@@ -5,7 +5,7 @@ STRING="AWS_HOST"
 
 echo "Update the app-config properties with ELB hostname"
 
-if [ -z $(grep "$STRING" "$FILE1") ]; then
+if [ -z $(grep "$STRING" "$FILE2") ]; then
 
         echo 'the ELB host exist' >&2
 else
