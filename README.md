@@ -195,6 +195,11 @@ git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
 cd 5848cf8a7dd2-tocryp
 
 chmod u+x deploy.sh
+#run follow command to have docker as sudo permission to run the docker command
+
+sudo usermod -aG docker ${USER}
+
+# Please logout and login EC2 instance.
 
 ```
 
@@ -210,6 +215,10 @@ chmod u+x deploy.sh
 ./deploy.sh
 
 ```
+
+Output : Dockerimage_deployed.PNG
+
+![Screenshot](Dockerimage_deployed.PNG)
 
 
 System Design 
