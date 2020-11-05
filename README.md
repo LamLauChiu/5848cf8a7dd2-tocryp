@@ -34,7 +34,15 @@ git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
 
 cd Quesion1
 
-grep HTTP ./access.log | wc -l
+#change the permission of file
+
+chmod u+x *.sh
+
+./counthttp.sh HTTP ./access.log
+
+output:
+![Screenshot](Output1a.PNG)
+
 
 ```
 b) 
