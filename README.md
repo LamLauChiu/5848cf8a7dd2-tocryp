@@ -100,12 +100,17 @@ cd Question1
 
 # run following command
 
+#python ./discoverec2bytag.py <aws-region> <pem key> <ec2 user> <tag value>
+
 cd Question2
 
 python ./discoverec2bytag.py us-east-2 my_aws_key.pem ec2-user api-server-002
 
 ```
 
+output:
+
+![Screenshot](./Question2/Output.PNG)
 
 
 
