@@ -194,7 +194,7 @@ git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
 
 cd 5848cf8a7dd2-tocryp
 
-chmod u+x deploy.sh
+chmod u+x deploy-app.sh
 #run follow command to have docker as sudo permission to run the docker command
 
 sudo usermod -aG docker ${USER}
@@ -203,8 +203,7 @@ sudo usermod -aG docker ${USER}
 
 ```
 
-* Run Deploy sh file
- * It will update the ELB host in webapp
+* Run Deploy sh file will update the ELB host in webapp
  * Do following : 
     * Buid docker image
        *  docker build --tag shortenurl:1.0 .
@@ -212,13 +211,19 @@ sudo usermod -aG docker ${USER}
        *  docker run -d -p 80:5000 shortenurl:1.0
 ```console
 
-./deploy.sh
+./deploy-app.sh
 
 ```
 
 Output : Dockerimage_deployed.PNG
 
 ![Screenshot](Dockerimage_deployed.PNG)
+
+Output: Main Page
+
+![Screenshot](page1.PNG)
+
+Output: 
 
 
 System Design 
