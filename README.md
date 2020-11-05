@@ -9,7 +9,42 @@ environment) to:
 3. Find out the country with most requests originating from (according to the sourceIP)
 ----
 
+Answer:
 
+Requirements:
+
+Linux server:
+
+If launching the Amazon EC2 instance please consider below as user data, otherwise please run with sudo
+
+yum install python3 -y
+yum install geoip
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py --user
+yum install git -y
+
+a) Run following command to cound the HTTP request
+
+download the code :
+git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
+
+
+```console
+git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
+
+cd Quesion1
+
+grep HTTP ./access.log | wc -l
+
+```
+b) 
+
+2) yum install 
+4) 
+```console
+foo@bar:~$ whoami
+foo
+```
 
 
 
@@ -19,7 +54,7 @@ Please help to prepare a script to query AWS API and look up the public IP of th
 ssh ec2-user@EC2_PUBLIC_IP .
 ----
 
-
+1. 
 
 
 
