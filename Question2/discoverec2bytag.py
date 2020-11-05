@@ -19,11 +19,14 @@ tag_val = sys.argv[4]
 def get_host(ec2, fv):
     
     f = {'Name': 'tag:Name', 'Values': [fv]}
-    #hosts = []
+    hosts = []
     for host in ec2.instances.filter(Filters=[f]):
-        #hosts.append(host.public_ip_address)
+        hosts.append(host.public_ip_address)
         print(host.public_ip_address)
-    return host.public_ip_address
+    if len(hosts) == 0:
+     return ''
+    else:
+     return hosts[0]
 
 
 def main():
