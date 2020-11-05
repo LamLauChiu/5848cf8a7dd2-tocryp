@@ -130,6 +130,9 @@ Implement a simple bit.ly like service
 
 
 Requirements
+----------------
+
+Below steps are part of cloudformation
 
 * Login to EC2 instance
 * RUN CMD 'sudo yum update'
@@ -148,6 +151,8 @@ Requirements
         * sudo groupadd docker
         * sudo usermod -aG docker ${USER}
         * logout and log in again to reflect the changes.
+        
+--------------
  * Download code from github
    * git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
 * Buid docker image
