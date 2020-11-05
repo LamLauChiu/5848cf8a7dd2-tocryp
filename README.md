@@ -36,7 +36,7 @@ output: gitdownload
 ```console
 git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
 
-cd Quesion1
+cd ./5848cf8a7dd2-tocryp/Quesion1
 
 #change the permission of file
 
@@ -56,7 +56,7 @@ b)
 This script will create the host.txt which will conatin top 10 host, please refer the output
 
 ```console
-cd Question1
+cd ./5848cf8a7dd2-tocryp/Question1
 
 ./toptenhost.sh
 ```
@@ -68,7 +68,7 @@ c) Get host by country
 
 
 ```console
-cd Question1
+cd ./5848cf8a7dd2-tocrypQuestion1
 
 ./toptenhost.sh
 ```
@@ -77,7 +77,7 @@ Output:
 ![Screenshot](./Question1/Output3a.PNG)
 
  ```console
-cd Question1
+cd ./5848cf8a7dd2-tocryp/Question1
 
  ./getcountrybyhost.sh
 ```
@@ -96,13 +96,11 @@ Requirements:
 
 
  ```console
-cd Question1
+cd ./5848cf8a7dd2-tocryp/Question2
 
 # run following command
 
 #python ./discoverec2bytag.py <aws-region> <pem key> <ec2 user> <tag value>
-
-cd Question2
 
 python ./discoverec2bytag.py us-east-2 my_aws_key.pem ec2-user api-server-002
 
@@ -121,13 +119,6 @@ output:
 Please implement a URL shortener service (e.g. https://bitly.com/) 
 Implement a simple bit.ly like service
 ----
-
-
-
-
-
-
-
 
 Requirements
 ----------------
@@ -153,8 +144,27 @@ Below steps are part of cloudformation
         * logout and log in again to reflect the changes.
         
 --------------
- * Download code from github
+Steps to run shorenten url aplication:
+
+a)  Login to the instance where aws client is configured.
+
+b)Download code from github
    * git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
+   
+c) Please update the {{KeyName: myawskey}} in the ./5848cf8a7dd2-tocryp/shortenUrl-cnf-infra.yaml
+
+d) Run following command:
+
+```consolde
+
+$ aws cloudformation create-stack --stack-name app-stack --template-body file://./shortenUrl-cnf-infra.yaml --profile awsdemo --region us-east-2
+
+```
+Output
+
+![Screenshot](AWS-CFN.PNG)
+
+
 * Buid docker image
    *  docker build --tag shortenurl:1.0 .
 * Run docker container from snapshot
