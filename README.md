@@ -153,7 +153,7 @@ b)Download code from github
    
 c) Please update the {{KeyName: myawskey}} in the ./5848cf8a7dd2-tocryp/shortenUrl-cnf-infra.yaml
 
-d) Run following command:
+d) Run following command (this will take the defult VPC setup):
 
 ```consolde
 
@@ -165,7 +165,26 @@ Output
 ![Screenshot](AWS-CFN.PNG)
 
 Output: Cloudforation execution on AWS successful:
+
 ![Screenshot](CFN-ExeccutedonAWS.PNG)
+
+
+* Login to the public Ip EC2 instance
+
+```console
+ssh -i myawskey.pem ec2-user@<ip-address>
+
+# check following:
+
+$ ssh -i myawskey.pem ec2-user@3.139.84.70
+docker --version
+
+git --version
+
+```
+output:
+
+![Screenshot](CFN-Creayed-Instance.PNG)
 
 
 
