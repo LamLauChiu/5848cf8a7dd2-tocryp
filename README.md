@@ -62,7 +62,7 @@ cd Question1
 ```
 Output:
 
-![Screenshot](./Question1/Output2a.PNG)
+![Screenshot](./Question1/output2a.PNG)
 
 2) yum install 
 4) 
