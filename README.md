@@ -46,10 +46,23 @@ chmod u+x *.sh
 
 ```
 Output:
+
 ![Screenshot](./Question1/Output1a.PNG)
 
 
 b) 
+#Find the top-10 (host) hosts makes most requests from 2019-06-10 00:00:00 to 2019-06-19 23:59:59, inclusively
+
+This script will create the host.txt which will conatin top 10 host, please refer the output
+
+```console
+cd Question1
+
+./toptenhost.sh
+```
+Output:
+
+![Screenshot](./Question1/Output2a.PNG)
 
 2) yum install 
 4) 
