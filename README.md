@@ -223,7 +223,13 @@ Output: Main Page
 
 ![Screenshot](page1.PNG)
 
-Output: 
+Output: click_onlink_to_goto_long_url
+
+![Screenshot](page1.PNG)
+
+Output : To display all submiited url
+
+![Screenshot](ReportedUrl.PNG)
 
 
 System Design 
