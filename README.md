@@ -64,6 +64,25 @@ Output:
 
 ![Screenshot](./Question1/output2a.PNG)
 
+c) Get host by country
+
+
+```console
+cd Question1
+
+./toptenhost.sh
+```
+Output:
+
+![Screenshot](./Question1/Output3a.PNG)
+
+ ```console
+cd Question1
+
+ ./getcountrybyhost.sh
+```
+ 
+
 2) yum install 
 4) 
 ```console
