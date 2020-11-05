@@ -110,7 +110,7 @@ python ./discoverec2bytag.py us-east-2 my_aws_key.pem ec2-user api-server-002
 
 output:
 
-![Screenshot](./Question2/Output.PNG)
+![Screenshot](./Question2/output2.PNG)
 
 
 
