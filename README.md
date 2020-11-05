@@ -83,22 +83,28 @@ cd Question1
 ```
  
 
-2) yum install 
-4) 
-```console
-foo@bar:~$ whoami
-foo
-```
-
-
-
-
 #Question-2:AWS API programming 
 Please help to prepare a script to query AWS API and look up the public IP of the instance with the specific EC2 Name tag. Then the script should execute the ssh command 
 ssh ec2-user@EC2_PUBLIC_IP .
 ----
 
-1. 
+
+Requirements:
+* Please install boto3 API of python3
+* Please make sure pem key is at the same level as script
+* Associate the Tag : api-server-002 in EC2 instance
+
+
+ ```console
+cd Question1
+
+# run following command
+
+cd Question2
+
+python ./discoverec2bytag.py us-east-2 my_aws_key.pem ec2-user api-server-002
+
+```
 
 
 
