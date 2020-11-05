@@ -45,6 +45,8 @@ output:
 
 
 ```
+
+![Screenshot](./Question1/Output1a.PNG)
 b) 
 
 2) yum install 
