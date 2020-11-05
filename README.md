@@ -41,7 +41,7 @@ chmod u+x *.sh
 ./counthttp.sh HTTP ./access.log
 
 output:
-![Screenshot](Question1/Output1a.PNG)
+![Screenshot](./Question1/Output1a.PNG)
 
 
 ```
