@@ -17,11 +17,11 @@ Linux server:
 
 If launching the Amazon EC2 instance please consider below as user data, otherwise please run with sudo
 
-yum install python3 -y
-yum install geoip
-curl -O https://bootstrap.pypa.io/get-pip.py
-python3 get-pip.py --user
-yum install git -y
+* yum install python3 -y
+* yum install geoip
+* curl -O https://bootstrap.pypa.io/get-pip.py
+* python3 get-pip.py --user
+* yum install git -y
 
 a) Run following command to cound the HTTP request
 
