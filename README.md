@@ -187,11 +187,30 @@ output:
 ![Screenshot](CFN-Creayed-Instance.PNG)
 
 
+* Run git clone
 
-* Buid docker image
-   *  docker build --tag shortenurl:1.0 .
-* Run docker container from snapshot
-   *  docker run -d -p 80:5000 shortenurl:1.0
+```console
+git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
+
+cd 5848cf8a7dd2-tocryp
+
+chmod u+x deploy.sh
+
+```
+
+* Run Deploy sh file
+ * It will update the ELB host in webapp
+ * Do following : 
+    * Buid docker image
+       *  docker build --tag shortenurl:1.0 .
+    * Run docker container from snapshot
+       *  docker run -d -p 80:5000 shortenurl:1.0
+```console
+
+./deploy.sh
+
+```
+
 
 System Design 
 
