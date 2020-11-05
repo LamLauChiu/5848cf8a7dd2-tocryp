@@ -164,6 +164,10 @@ Output
 
 ![Screenshot](AWS-CFN.PNG)
 
+Output: Cloudforation execution on AWS successful:
+![Screenshot](CFN-ExeccutedonAWS.PNG)
+
+
 
 * Buid docker image
    *  docker build --tag shortenurl:1.0 .
