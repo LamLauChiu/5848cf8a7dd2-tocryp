@@ -28,6 +28,9 @@ a) Run following command to cound the HTTP request
 download the code :
 git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
 
+output: gitdownload
+![Screenshot](gitdownload.PNG)
+
 
 ```console
 git clone https://github.com/chaudharysud/5848cf8a7dd2-tocryp.git
@@ -40,13 +43,11 @@ chmod u+x *.sh
 
 ./counthttp.sh HTTP ./access.log
 
-output:
-![Screenshot](./Question1/Output1a.PNG)
-
-
 ```
-
+Output:
 ![Screenshot](./Question1/Output1a.PNG)
+
+
 b) 
 
 2) yum install 
