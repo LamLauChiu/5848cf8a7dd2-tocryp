@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+<title>{% block title %} Short Url{% endblock %}</title>
+
+{% block content %}
+<form action="#", method="post">
+    <label for="text">Enter Port Range </label>
+
+    <input type="text" name="ipa" id="ipa_id"
+       placeholder="10.0.0.0"
+       size="50"
+       required>
+
+    <input type="text" name="ipb" id="ipb_id"
+       placeholder="10.0.0.0"
+       size="50"
+       required>
+    <br>
+    <label for="text">Enter Limit </label>
+    <input type="text" name="limit" id="limit_id"
+       placeholder="5"
+       size="50"
+       required>
+    <br>
+    <label for="text">Enter time </label>
+    <input type="text" name="time" id="time_id"
+       placeholder="60"
+       size="50"
+       required>
+    <br>
+
+
+    <input type="submit" value="submit" class="btn btn-rate">
+
+
+</form>
+{% endblock %}
