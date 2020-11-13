@@ -12,8 +12,8 @@ with open('app-config.properties', 'rb') as config_file:
     configs.load(config_file)
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("DATABASE_URI").data
-# app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("DATABASE_URI").data
+app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("SQLITE_DATABASE_URI").data
+#app.config['SQLALCHEMY_DATABASE_URI'] = configs.get("POSTGRES_DATABASE_URI").data
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -36,6 +36,19 @@ class UrlsdbModel(db.Model):
         self.long = long
         self.short = short
 
+
+class ipsdbModel(db.Model):
+    id_ = db.Column("id_", db.Integer, primary_key=True)
+    ipa = db.Column("ipa", db.String(20))
+    ipb = db.Column("ipb", db.String(20))
+    limit = db.Column("limit", db.String(20))
+    time = db.Column("time", db.String(20))
+
+    def __init__(self, ipa, ipb, limit, time):
+        self.ipa = ipa
+        self.ipb = ipb
+        self.limit = limit
+        self.time = time
 
 """
 This function is used to create the databased as per decorator means before very first request database will be created.
@@ -74,7 +87,7 @@ shorten url by calling get_alphanum_str function and then insert the new shorten
 
 
 @app.route('/', methods=['POST', 'GET'])
-def home_page():
+def homepage():
     if request.method == "POST":
         url_received = request.form["nm"]
         found_url = UrlsdbModel.query.filter_by(long=url_received).first()
@@ -82,18 +95,47 @@ def home_page():
         if found_url:
             return redirect(url_for("display_short_url", url=found_url.short))
         else:
-            short_url = get_alphanum_str()
-            print(short_url)
-            new_url = UrlsdbModel(url_received, short_url)
-            db.session.add(new_url)
-            db.session.commit()
-            return redirect(url_for("display_short_url", url=short_url))
+           short_url = get_alphanum_str()
+           new_url = UrlsdbModel(url_received, short_url)
+           db.session.add(new_url)
+           db.session.commit()
+           return redirect(url_for("display_short_url", url=short_url))
     else:
-        return render_template('url_page.html')
+       return render_template('url_page.html')
+
+
+@app.route('/limitrange', methods=['POST', 'GET'])
+def limit_range():
+    if request.method == "POST":
+        ipa = request.form["ipa"]
+        ipb = request.form["ipb"]
+        limit = request.form["limit"]
+        time = request.form["time"]
+
+        last_octet_range_a = int(ipa[-3:])
+        last_octet_range_b = int(ipb[-3:])
+
+        if last_octet_range_a < last_octet_range_b:
+
+            #ToDo: check the count from db before inserting into DB
+
+            print("valid request for 60 second")
+            request_data = ipsdbModel(ipa, ipb, limit, time)
+            db.session.add(request_data)
+            db.session.commit()
+
+        else:
+            print("request is not valid")
+
+    return render_template('limit_range.html')
+
+
 
 
 """
+
 This function is used to redirect the short url to long url
+
 """
 
 
@@ -125,4 +167,4 @@ def reported_all():
 
 if __name__ == '__main__':
 
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(port=5000, debug=True)
